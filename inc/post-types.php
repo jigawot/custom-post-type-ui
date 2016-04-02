@@ -111,17 +111,6 @@ function cptui_manage_post_types() {
 
 	$post_type_deleted = false;
 
-	if ( ! empty( $_POST ) ) {
-		if ( isset( $_POST['cpt_submit'] ) ) {
-			check_admin_referer( 'cptui_addedit_post_type_nonce_action', 'cptui_addedit_post_type_nonce_field' );
-			$notice = cptui_update_post_type( $_POST );
-		} elseif ( isset( $_POST['cpt_delete'] ) ) {
-			check_admin_referer( 'cptui_addedit_post_type_nonce_action', 'cptui_addedit_post_type_nonce_field' );
-			$notice = cptui_delete_post_type( $_POST );
-			$post_type_deleted = true;
-		}
-	}
-
 	$tab = ( ! empty( $_GET ) && ! empty( $_GET['action'] ) && 'edit' === $_GET['action'] ) ? 'edit' : 'new';
 	$tab_class = 'cptui-' . $tab; ?>
 
@@ -1576,3 +1565,23 @@ function cptui_check_page_slugs( $post_type_slug = '' ) {
 
 	return false;
 }
+
+function cptui_process_post_type() {
+
+	if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+		return;
+	}
+
+	if ( ! empty( $_POST ) ) {
+		if ( isset( $_POST['cpt_submit'] ) ) {
+			check_admin_referer( 'cptui_addedit_post_type_nonce_action', 'cptui_addedit_post_type_nonce_field' );
+			$notice = cptui_update_post_type( $_POST );
+		} elseif ( isset( $_POST['cpt_delete'] ) ) {
+			check_admin_referer( 'cptui_addedit_post_type_nonce_action', 'cptui_addedit_post_type_nonce_field' );
+			$notice            = cptui_delete_post_type( $_POST );
+			$post_type_deleted = true;
+		}
+	}
+
+}
+add_action( 'admin_init', 'cptui_process_post_type' );
