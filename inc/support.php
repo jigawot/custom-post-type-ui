@@ -55,10 +55,14 @@ function cptui_support() {
 
 		<h1><?php _e( 'Custom Post Type UI Support', 'custom-post-type-ui' ); ?></h1>
 
-		<p><?php printf(
-			__( 'Please note that this plugin will NOT handle display of registered post types or taxonomies in your current theme. It will simply register them for you. If all else fails, visit us on the %s', 'custom-post-type-ui' ),
-			'<a href="https://www.wordpress.org/support/plugin/custom-post-type-ui/">' . __( 'Support Forums', 'custom-post-type-ui' ) . '</a>'
-		); ?></p>
+		<p><?php _e( 'Please note that Custom Post Type UI alone will not display post types or taxonomies data in customized places within your site; it simply registers them for you to use.', 'custom-post-type-ui' ); ?></p>
+
+		<p><?php
+			printf(
+				__( ' Check out %s for an easy way to display post type content from any registered types on your site, including those created with Custom Post Type UI and more.', 'custom-post-type-ui' ),
+				'<a target="_blank" href="https://pluginize.com/product/custom-post-type-ui-extended/?utm_source=cptui-wporg&utm_medium=text&utm_campaign=cptui_description">' . __( 'Custom Post Type UI Extended', 'custom-post-type-ui' ) . '</a>'
+			); ?>
+		</p>
 
 		<table id="support" class="form-table cptui-table">
 			<tr>
