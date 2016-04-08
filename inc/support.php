@@ -60,7 +60,7 @@ function cptui_support() {
 		<p><?php
 			printf(
 				__( ' Check out %s for an easy way to display post type content from any registered types on your site, including those created with Custom Post Type UI and more.', 'custom-post-type-ui' ),
-				'<a target="_blank" href="https://pluginize.com/product/custom-post-type-ui-extended/?utm_source=cptui-wporg&utm_medium=text&utm_campaign=cptui_description">' . __( 'Custom Post Type UI Extended', 'custom-post-type-ui' ) . '</a>'
+				'<a target="_blank" href="https://pluginize.com/product/custom-post-type-ui-extended/?utm_source=cptui-help&utm_medium=text&utm_campaign=top-of-page">' . __( 'Custom Post Type UI Extended', 'custom-post-type-ui' ) . '</a>'
 			); ?>
 		</p>
 
