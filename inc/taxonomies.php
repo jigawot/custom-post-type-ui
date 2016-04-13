@@ -375,9 +375,9 @@ function cptui_manage_taxonomies() {
 			<table class="form-table cptui-table">
 
 				<?php
-					if ( isset( $current['description'] ) ) {
-						$current['description'] = stripslashes_deep( $current['description'] );
-					}
+				if ( isset( $current['description'] ) ) {
+					$current['description'] = stripslashes_deep( $current['description'] );
+				}
 					echo $ui->get_textarea_input( array(
 						'namearray' => 'cpt_custom_tax',
 						'name'      => 'description',
@@ -740,10 +740,10 @@ function cptui_manage_taxonomies() {
 					) );
 
 					echo $ui->get_text_input( array(
-						'labeltext' => __( 'REST API base slug', 'custom-post-type-ui' ),
-						'helptext'  => esc_attr__( 'Slug to use in REST API URLs.', 'custom-post-type-ui' ),
 						'namearray' => 'cpt_custom_tax',
 						'name'      => 'rest_base',
+						'labeltext' => esc_html__( 'REST API base slug', 'custom-post-type-ui' ),
+						'helptext'  => esc_attr__( 'Slug to use in REST API URLs.', 'custom-post-type-ui' ),
 						'textvalue' => ( isset( $current['rest_base'] ) ) ? esc_attr( $current['rest_base'] ) : '',
 					) );
 
