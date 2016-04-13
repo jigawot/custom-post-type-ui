@@ -54,7 +54,7 @@ add_action( 'admin_enqueue_scripts', 'cptui_taxonomies_enqueue_scripts' );
  */
 function cptui_taxonomy_tabs( $tabs = array(), $current_page = '' ) {
 
-	if ( 'taxonomies' == $current_page ) {
+	if ( 'taxonomies' === $current_page ) {
 		$taxonomies = cptui_get_taxonomy_data();
 		$classes    = array( 'nav-tab' );
 
@@ -122,7 +122,7 @@ function cptui_manage_taxonomies() {
 		}
 	}
 
-	$tab = ( !empty( $_GET ) && !empty( $_GET['action'] ) && 'edit' == $_GET['action'] ) ? 'edit' : 'new';
+	$tab = ( !empty( $_GET ) && !empty( $_GET['action'] ) && 'edit' === $_GET['action'] ) ? 'edit' : 'new';
 	$tab_class = 'cptui-' . $tab; ?>
 
 	<div class="wrap <?php echo esc_attr( $tab_class ); ?>">
