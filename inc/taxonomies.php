@@ -65,7 +65,7 @@ function cptui_taxonomy_tabs( $tabs = array(), $current_page = '' ) {
 			'text'          => __( 'Add New Taxonomy', 'custom-post-type-ui' ),
 			'classes'       => $classes,
 			'url'           => cptui_admin_url( 'admin.php?page=cptui_manage_' . $current_page ),
-			'aria-selected' => 'false'
+			'aria-selected' => 'false',
 		);
 
 		$action = cptui_get_current_action();
@@ -83,14 +83,14 @@ function cptui_taxonomy_tabs( $tabs = array(), $current_page = '' ) {
 				'text'          => __( 'Edit Taxonomies', 'custom-post-type-ui' ),
 				'classes'       => $classes,
 				'url'           => esc_url( add_query_arg( array( 'action' => 'edit' ), cptui_admin_url( 'admin.php?page=cptui_manage_' . $current_page ) ) ),
-				'aria-selected' => ( ! empty( $action ) ) ? 'true' : 'false'
+				'aria-selected' => ( ! empty( $action ) ) ? 'true' : 'false',
 			);
 
 			$tabs['tabs']['view'] = array(
 				'text'          => __( 'View Taxonomies', 'custom-post-type-ui' ),
 				'classes'       => array( 'nav-tab' ), // Prevent notices.
 				'url'           => esc_url( cptui_admin_url( 'admin.php?page=cptui_listings#taxonomies' ) ),
-				'aria-selected' => 'false'
+				'aria-selected' => 'false',
 			);
 		}
 	}
@@ -285,7 +285,7 @@ function cptui_manage_taxonomies() {
 							'textvalue'  => $post_type->name,
 							'labeltext'  => $post_type->label . ' ' . $core_label,
 							'helptext'   => sprintf( esc_attr__( 'Adds %s support', 'custom-post-type-ui' ), $post_type->label ),
-							'wrap'       => false
+							'wrap'       => false,
 						) );
 					}
 
@@ -298,7 +298,7 @@ function cptui_manage_taxonomies() {
 						'aftertext' => __( '(e.g. Actors)', 'custom-post-type-ui' ),
 						'labeltext' => __( 'Plural Label', 'custom-post-type-ui' ),
 						'helptext'  => esc_attr__( 'Used for the taxonomy admin menu item.', 'custom-post-type-ui' ),
-						'required'  => true
+						'required'  => true,
 					) );
 
 					echo $ui->get_text_input( array(
@@ -308,7 +308,7 @@ function cptui_manage_taxonomies() {
 						'aftertext' => __( '(e.g. Actor)', 'custom-post-type-ui' ),
 						'labeltext' => __( 'Singular Label', 'custom-post-type-ui' ),
 						'helptext'  => esc_attr__( 'Used when a singular label is needed.', 'custom-post-type-ui' ),
-						'required'  => true
+						'required'  => true,
 					) );
 			?>
 			</table>
@@ -571,7 +571,7 @@ function cptui_manage_taxonomies() {
 					$select = array(
 						'options' => array(
 							array( 'attr' => '0', 'text' => __( 'False', 'custom-post-type-ui' ) ),
-							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ), 'default' => 'true' )
+							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ), 'default' => 'true' ),
 						)
 					);
 					$selected  = ( isset( $current ) ) ? disp_boolean( $current['public'] ) : '';
@@ -582,13 +582,13 @@ function cptui_manage_taxonomies() {
 						'labeltext'  => __( 'Public', 'custom-post-type-ui' ),
 						'aftertext'  => __( '(default: true)', 'custom-post-type-ui' ),
 						'helptext'   => esc_attr__( 'Whether the taxonomy should be publicly queryable.', 'custom-post-type-ui' ),
-						'selections' => $select
+						'selections' => $select,
 					) );
 
 					$select = array(
 						'options' => array(
 							array( 'attr' => '0', 'text' => __( 'False', 'custom-post-type-ui' ), 'default' => 'true' ),
-							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ) )
+							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ) ),
 						)
 					);
 					$selected = ( isset( $current ) ) ? disp_boolean( $current['hierarchical'] ) : '';
@@ -599,13 +599,13 @@ function cptui_manage_taxonomies() {
 						'labeltext'     => __( 'Hierarchical', 'custom-post-type-ui' ),
 						'aftertext'     => __( '(default: false)', 'custom-post-type-ui' ),
 						'helptext'      => esc_attr__( 'Whether the taxonomy can have parent-child relationships', 'custom-post-type-ui' ),
-						'selections'    => $select
+						'selections'    => $select,
 					) );
 
 					$select = array(
 						'options' => array(
 							array( 'attr' => '0', 'text' => __( 'False', 'custom-post-type-ui' ) ),
-							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ), 'default' => 'true' )
+							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ), 'default' => 'true' ),
 						)
 					);
 					$selected = ( isset( $current ) ) ? disp_boolean( $current['show_ui'] ) : '';
@@ -616,7 +616,7 @@ function cptui_manage_taxonomies() {
 						'labeltext'     => __( 'Show UI', 'custom-post-type-ui' ),
 						'aftertext'     => __( '(default: true)', 'custom-post-type-ui' ),
 						'helptext'      => esc_attr__( 'Whether to generate a default UI for managing this custom taxonomy.', 'custom-post-type-ui' ),
-						'selections'    => $select
+						'selections'    => $select,
 					) );
 
 					$select = array(
@@ -633,7 +633,7 @@ function cptui_manage_taxonomies() {
 						'labeltext'     => __( 'Query Var', 'custom-post-type-ui' ),
 						'aftertext'     => __( '(default: true)', 'custom-post-type-ui' ),
 						'helptext'      => esc_attr__( 'Sets the query_var key for this taxonomy.', 'custom-post-type-ui' ),
-						'selections'    => $select
+						'selections'    => $select,
 					) );
 
 					echo $ui->get_text_input( array(
@@ -648,7 +648,7 @@ function cptui_manage_taxonomies() {
 					$select = array(
 						'options' => array(
 							array( 'attr' => '0', 'text' => __( 'False', 'custom-post-type-ui' ) ),
-							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ), 'default' => 'true' )
+							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ), 'default' => 'true' ),
 						)
 					);
 					$selected = ( isset( $current ) ) ? disp_boolean( $current['rewrite'] ) : '';
@@ -659,7 +659,7 @@ function cptui_manage_taxonomies() {
 						'labeltext'     => __( 'Rewrite', 'custom-post-type-ui' ),
 						'aftertext'     => __( '(default: true)', 'custom-post-type-ui' ),
 						'helptext'      => esc_attr__( 'Whether or not WordPress should use rewrites for this taxonomy.', 'custom-post-type-ui' ),
-						'selections'    => $select
+						'selections'    => $select,
 					) );
 
 					echo $ui->get_text_input( array(
@@ -674,7 +674,7 @@ function cptui_manage_taxonomies() {
 					$select = array(
 						'options' => array(
 							array( 'attr' => '0', 'text' => __( 'False', 'custom-post-type-ui' ) ),
-							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ), 'default' => 'true' )
+							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ), 'default' => 'true' ),
 						)
 					);
 					$selected = ( isset( $current ) ) ? disp_boolean( $current['rewrite_withfront'] ) : '';
@@ -685,13 +685,13 @@ function cptui_manage_taxonomies() {
 						'labeltext'     => __( 'Rewrite With Front', 'custom-post-type-ui' ),
 						'aftertext'     => __( '(default: true)', 'custom-post-type-ui' ),
 						'helptext'      => esc_attr__( 'Should the permastruct be prepended with the front base.', 'custom-post-type-ui' ),
-						'selections'    => $select
+						'selections'    => $select,
 					) );
 
 					$select = array(
 						'options' => array(
 							array( 'attr' => '0', 'text' => __( 'False', 'custom-post-type-ui' ), 'default' => 'false' ),
-							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ) )
+							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ) ),
 						)
 					);
 					$selected = ( isset( $current ) ) ? disp_boolean( $current['rewrite_hierarchical'] ) : '';
@@ -702,13 +702,13 @@ function cptui_manage_taxonomies() {
 						'labeltext'     => __( 'Rewrite Hierarchical', 'custom-post-type-ui' ),
 						'aftertext'     => __( '(default: false)', 'custom-post-type-ui' ),
 						'helptext'      => esc_attr__( 'Should the permastruct allow hierarchical urls.', 'custom-post-type-ui' ),
-						'selections'    => $select
+						'selections'    => $select,
 					) );
 
 					$select = array(
 						'options' => array(
 							array( 'attr' => '0', 'text' => __( 'False', 'custom-post-type-ui' ), 'default' => 'true' ),
-							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ) )
+							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ) ),
 						)
 					);
 					$selected = ( isset( $current ) ) ? disp_boolean( $current['show_admin_column'] ) : '';
@@ -719,7 +719,7 @@ function cptui_manage_taxonomies() {
 						'labeltext'     => __( 'Show Admin Column', 'custom-post-type-ui' ),
 						'aftertext'     => __( '(default: false)', 'custom-post-type-ui' ),
 						'helptext'      => esc_attr__( 'Whether to allow automatic creation of taxonomy columns on associated post-types.', 'custom-post-type-ui' ),
-						'selections'    => $select
+						'selections'    => $select,
 					) );
 
 					$select = array(
@@ -736,7 +736,7 @@ function cptui_manage_taxonomies() {
 						'labeltext'  => __( 'Show in REST API', 'custom-post-type-ui' ),
 						'aftertext'  => __( '(default: false)', 'custom-post-type-ui' ),
 						'helptext'   => esc_attr__( 'Whether to show this taxonomy data in the WP REST API.', 'custom-post-type-ui' ),
-						'selections' => $select
+						'selections' => $select,
 					) );
 
 					echo $ui->get_text_input( array(
@@ -750,7 +750,7 @@ function cptui_manage_taxonomies() {
 					$select             = array(
 						'options' => array(
 							array( 'attr' => '0', 'text' => __( 'False', 'custom-post-type-ui' ), 'default' => 'false' ),
-							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ) )
+							array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ) ),
 						)
 					);
 					$selected           = ( isset( $current ) && ! empty( $current['show_in_quick_edit'] ) ) ? disp_boolean( $current['show_in_quick_edit'] ) : '';
@@ -761,7 +761,7 @@ function cptui_manage_taxonomies() {
 						'labeltext'  => __( 'Show in quick/bulk edit panel.', 'custom-post-type-ui' ),
 						'aftertext'  => __( '(default: false)', 'custom-post-type-ui' ),
 						'helptext'   => esc_attr__( 'Whether to show the taxonomy in the quick/bulk edit panel.', 'custom-post-type-ui' ),
-						'selections' => $select
+						'selections' => $select,
 					) );
 				?>
 				</table>
