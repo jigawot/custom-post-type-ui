@@ -165,7 +165,7 @@ function cptui_manage_taxonomies() {
 	$ui = new cptui_admin_ui();
 
 	// Will only be set if we're already on the edit screen.
-	if ( !empty( $taxonomies ) ) { ?>
+	if ( ! empty( $taxonomies ) ) { ?>
 		<form id="cptui_select_taxonomy" method="post" action="<?php echo esc_url( cptui_get_post_form_action( $ui ) ); ?>">
 			<label for="taxonomy"><?php _e( 'Select: ', 'custom-post-type-ui' ); ?></label>
 			<?php
@@ -183,14 +183,14 @@ function cptui_manage_taxonomies() {
 		</form>
 	<?php
 
-        /**
-         * Fires below the taxonomy select input.
-         *
-         * @since 1.1.0
-         *
-         * @param string $value Current taxonomy selected.
-         */
-        do_action( 'cptui_below_taxonomy_select', $current['name'] );
+		/**
+		 * Fires below the taxonomy select input.
+		 *
+		 * @since 1.1.0
+		 *
+		 * @param string $value Current taxonomy selected.
+		 */
+		do_action( 'cptui_below_taxonomy_select', $current['name'] );
 	} ?>
 
 	<form class="taxonomiesui" method="post" action="<?php echo esc_url( cptui_get_post_form_action( $ui ) ); ?>">
