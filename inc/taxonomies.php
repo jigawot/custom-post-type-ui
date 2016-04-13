@@ -22,9 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function cptui_taxonomies_enqueue_scripts() {
 
-	$currentScreen = get_current_screen();
+	$current_screen = get_current_screen();
 
-	if ( ! is_object( $currentScreen ) || 'cpt-ui_page_cptui_manage_taxonomies' !== $currentScreen->base ) {
+	if ( ! is_object( $current_screen ) || 'cpt-ui_page_cptui_manage_taxonomies' !== $current_screen->base ) {
 		return;
 	}
 
