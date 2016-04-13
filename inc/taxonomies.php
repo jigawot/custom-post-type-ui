@@ -211,7 +211,7 @@ function cptui_manage_taxonomies() {
 						'name'          => 'name',
 						'textvalue'     => ( isset( $current['name'] ) ) ? esc_attr( $current['name'] ) : '',
 						'maxlength'     => '32',
-						'helptext'      => esc_attr__( 'The taxonomy name/slug. Used for various queries for taxonomy content.', 'custom-post-type-ui'),
+						'helptext'      => esc_attr__( 'The taxonomy name/slug. Used for various queries for taxonomy content.', 'custom-post-type-ui' ),
 						'required'      => true,
 						'placeholder'   => false,
 						'wrap'          => false,
