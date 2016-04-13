@@ -415,7 +415,7 @@ function cptui_manage_post_types() {
 						'namearray'     => 'cpt_labels',
 						'name'          => 'not_found',
 						'textvalue'     => ( isset( $current['labels']['not_found'] ) ) ? esc_attr( $current['labels']['not_found'] ) : '',
-						'aftertext'     => __( '(e.g. No Movies found)', 'custom-post-type-ui' )
+						'aftertext'     => __( '(e.g. No Movies found)', 'custom-post-type-ui' ),
 					) );
 
 					echo $ui->get_text_input( array(
@@ -424,7 +424,7 @@ function cptui_manage_post_types() {
 						'namearray'     => 'cpt_labels',
 						'name'          => 'not_found_in_trash',
 						'textvalue'     => ( isset( $current['labels']['not_found_in_trash'] ) ) ? esc_attr( $current['labels']['not_found_in_trash'] ) : '',
-						'aftertext'     => __( '(e.g. No Movies found in Trash)', 'custom-post-type-ui' )
+						'aftertext'     => __( '(e.g. No Movies found in Trash)', 'custom-post-type-ui' ),
 					) );
 
 					echo $ui->get_text_input( array(
@@ -573,13 +573,13 @@ function cptui_manage_post_types() {
 					'labeltext'     => __( 'Show UI', 'custom-post-type-ui' ),
 					'aftertext'     => __( '(default: true)', 'custom-post-type-ui' ),
 					'helptext'      => esc_attr__( 'Whether to generate a default UI for managing this post type.', 'custom-post-type-ui' ),
-					'selections'    => $select
+					'selections'    => $select,
 				) );
 
 				$select = array(
 					'options' => array(
 						array( 'attr' => '0', 'text' => __( 'False', 'custom-post-type-ui' ) ),
-						array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ), 'default' => 'true' )
+						array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ), 'default' => 'true' ),
 					)
 				);
 				$selected = ( isset( $current ) && ! empty( $current['show_in_nav_menus'] ) ) ? disp_boolean( $current['show_in_nav_menus'] ) : '';
@@ -590,13 +590,13 @@ function cptui_manage_post_types() {
 					'labeltext'  => __( 'Show in Nav Menus', 'custom-post-type-ui' ),
 					'aftertext'  => __( '(CPTUI default: true)', 'custom-post-type-ui' ),
 					'helptext'   => esc_attr__( 'Whether post type is available for selection in navigation menus.', 'custom-post-type-ui' ),
-					'selections' => $select
+					'selections' => $select,
 				) );
 
 				$select = array(
 					'options' => array(
 						array( 'attr' => '0', 'text' => __( 'False', 'custom-post-type-ui' ), 'default' => 'false' ),
-						array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ) )
+						array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ) ),
 					)
 				);
 				$selected = ( isset( $current ) && ! empty( $current['show_in_rest'] ) ) ? disp_boolean( $current['show_in_rest'] ) : '';
@@ -607,7 +607,7 @@ function cptui_manage_post_types() {
 					'labeltext'     => __( 'Show in REST API', 'custom-post-type-ui' ),
 					'aftertext'     => __( '(default: false)', 'custom-post-type-ui' ),
 					'helptext'      => esc_attr__( 'Whether to show this post type data in the WP REST API.', 'custom-post-type-ui' ),
-					'selections'    => $select
+					'selections'    => $select,
 				) );
 
 				echo $ui->get_text_input( array(
