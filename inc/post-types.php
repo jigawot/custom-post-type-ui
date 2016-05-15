@@ -199,8 +199,12 @@ function cptui_manage_post_types() {
 		do_action( 'cptui_below_post_type_select', $current['name'] );
 	} ?>
 
-	<form class="posttypesui" method="post" action="<?php echo esc_url( cptui_get_post_form_action( $ui ) ); ?>">
-		<div class="cptui-section">
+	<form class="posttypesui meta-box-sortables" method="post" action="<?php echo esc_url( cptui_get_post_form_action( $ui ) ); ?>">
+		<div class="cptui-section postbox">
+			<button type="button" class="handlediv button-link" aria-expanded="true">
+				<span class="screen-reader-text">Toggle panel: Excerpt</span>
+				<span class="toggle-indicator" aria-hidden="true"></span>
+			</button>
 			<?php echo $ui->get_fieldset_start();
 				echo $ui->get_legend_start();
 				esc_html_e( 'Basic settings', 'custom-post-type-ui' );
