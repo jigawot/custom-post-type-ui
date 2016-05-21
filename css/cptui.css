@@ -326,3 +326,11 @@ fieldset .cptui-help {
 .taxonomy-listing th {
   width: 20%;
 }
+
+#slugchanged {
+  color: red;
+}
+
+#slugchanged.hidemessage {
+  display: none;
+}
