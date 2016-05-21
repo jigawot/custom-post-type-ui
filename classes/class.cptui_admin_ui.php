@@ -13,7 +13,7 @@
  *
  * @since 1.0.0
  */
-class cptui_admin_ui {
+class cptui_admin_ui implements CPTUI_Admin_UI_Interface {
 
 	/**
 	 * Return an opening `<tr>` tag.
