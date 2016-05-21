@@ -47,6 +47,16 @@
 		value = replaceDiacritics(value);
 		value = replaceSpecialCharacters(value);
 		$(this).attr('value',value);
+
+		//Displays a message if slug changes.
+		if(undefined != original_slug) {
+			var $slugchanged = $('#slugchanged');
+			if(value != original_slug) {
+				$slugchanged.removeClass('hidemessage');
+			} else {
+				$slugchanged.addClass('hidemessage');
+			}
+		}
 	});
 
 	// Replace diacritic characters with latin characters.
