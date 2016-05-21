@@ -1,5 +1,10 @@
 (function($) {
 
+	if ('edit' === getParameterByName('action')) {
+		// Store our original slug on page load for edit checking.
+		var original_slug = $('#name').val();
+	}
+
 	// Switch to newly selected post type or taxonomy automatically.
 	$('#post_type').on('change',function(){
 		$('#cptui_select_post_type').submit();
