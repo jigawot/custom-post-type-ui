@@ -587,9 +587,8 @@ function cptui_manage_taxonomies() {
 					echo $ui->get_select_input( array(
 						'namearray'  => 'cpt_custom_tax',
 						'name'       => 'public',
-						'labeltext'  => __( 'Public', 'custom-post-type-ui' ),
-						'aftertext'  => __( '(default: true)', 'custom-post-type-ui' ),
-						'helptext'   => esc_attr__( 'Whether the taxonomy should be publicly queryable.', 'custom-post-type-ui' ),
+						'labeltext'  => esc_html__( 'Public', 'custom-post-type-ui' ),
+						'aftertext'  => esc_html__( '(default: true) Whether or not the taxonomy should be publicly queryable.', 'custom-post-type-ui' ),
 						'selections' => $select,
 					) );
 
@@ -604,9 +603,8 @@ function cptui_manage_taxonomies() {
 					echo $ui->get_select_input( array(
 						'namearray'  => 'cpt_custom_tax',
 						'name'       => 'hierarchical',
-						'labeltext'  => __( 'Hierarchical', 'custom-post-type-ui' ),
-						'aftertext'  => __( '(default: false)', 'custom-post-type-ui' ),
-						'helptext'   => esc_attr__( 'Whether the taxonomy can have parent-child relationships', 'custom-post-type-ui' ),
+						'labeltext'  => esc_html__( 'Hierarchical', 'custom-post-type-ui' ),
+						'aftertext'  => esc_html__( '(default: false) Whether the taxonomy can have parent-child relationships.', 'custom-post-type-ui' ),
 						'selections' => $select,
 					) );
 
@@ -621,9 +619,8 @@ function cptui_manage_taxonomies() {
 					echo $ui->get_select_input( array(
 						'namearray'  => 'cpt_custom_tax',
 						'name'       => 'show_ui',
-						'labeltext'  => __( 'Show UI', 'custom-post-type-ui' ),
-						'aftertext'  => __( '(default: true)', 'custom-post-type-ui' ),
-						'helptext'   => esc_attr__( 'Whether to generate a default UI for managing this custom taxonomy.', 'custom-post-type-ui' ),
+						'labeltext'  => esc_html__( 'Show UI', 'custom-post-type-ui' ),
+						'aftertext'  => esc_html__( '(default: true) Whether to generate a default UI for managing this custom taxonomy.', 'custom-post-type-ui' ),
 						'selections' => $select,
 					) );
 
@@ -638,9 +635,8 @@ function cptui_manage_taxonomies() {
 					echo $ui->get_select_input( array(
 						'namearray'  => 'cpt_custom_tax',
 						'name'       => 'query_var',
-						'labeltext'  => __( 'Query Var', 'custom-post-type-ui' ),
-						'aftertext'  => __( '(default: true)', 'custom-post-type-ui' ),
-						'helptext'   => esc_attr__( 'Sets the query_var key for this taxonomy.', 'custom-post-type-ui' ),
+						'labeltext'  => esc_html__( 'Query Var', 'custom-post-type-ui' ),
+						'aftertext'  => esc_html__( '(default: true) Sets the query_var key for this taxonomy.', 'custom-post-type-ui' ),
 						'selections' => $select,
 					) );
 
@@ -664,9 +660,8 @@ function cptui_manage_taxonomies() {
 					echo $ui->get_select_input( array(
 						'namearray'  => 'cpt_custom_tax',
 						'name'       => 'rewrite',
-						'labeltext'  => __( 'Rewrite', 'custom-post-type-ui' ),
-						'aftertext'  => __( '(default: true)', 'custom-post-type-ui' ),
-						'helptext'   => esc_attr__( 'Whether or not WordPress should use rewrites for this taxonomy.', 'custom-post-type-ui' ),
+						'labeltext'  => esc_html__( 'Rewrite', 'custom-post-type-ui' ),
+						'aftertext'  => esc_html__( '(default: true) Whether or not WordPress should use rewrites for this taxonomy.', 'custom-post-type-ui' ),
 						'selections' => $select,
 					) );
 
@@ -690,9 +685,8 @@ function cptui_manage_taxonomies() {
 					echo $ui->get_select_input( array(
 						'namearray'     => 'cpt_custom_tax',
 						'name'          => 'rewrite_withfront',
-						'labeltext'     => __( 'Rewrite With Front', 'custom-post-type-ui' ),
-						'aftertext'     => __( '(default: true)', 'custom-post-type-ui' ),
-						'helptext'      => esc_attr__( 'Should the permastruct be prepended with the front base.', 'custom-post-type-ui' ),
+						'labeltext'     => esc_html__( 'Rewrite With Front', 'custom-post-type-ui' ),
+						'aftertext'     => esc_html__( '(default: true) Should the permastruct be prepended with the front base.', 'custom-post-type-ui' ),
 						'selections'    => $select,
 					) );
 
@@ -707,9 +701,8 @@ function cptui_manage_taxonomies() {
 					echo $ui->get_select_input( array(
 						'namearray'     => 'cpt_custom_tax',
 						'name'          => 'rewrite_hierarchical',
-						'labeltext'     => __( 'Rewrite Hierarchical', 'custom-post-type-ui' ),
-						'aftertext'     => __( '(default: false)', 'custom-post-type-ui' ),
-						'helptext'      => esc_attr__( 'Should the permastruct allow hierarchical urls.', 'custom-post-type-ui' ),
+						'labeltext'     => esc_html__( 'Rewrite Hierarchical', 'custom-post-type-ui' ),
+						'aftertext'     => esc_html__( '(default: false) Should the permastruct allow hierarchical urls.', 'custom-post-type-ui' ),
 						'selections'    => $select,
 					) );
 
@@ -724,9 +717,8 @@ function cptui_manage_taxonomies() {
 					echo $ui->get_select_input( array(
 						'namearray'     => 'cpt_custom_tax',
 						'name'          => 'show_admin_column',
-						'labeltext'     => __( 'Show Admin Column', 'custom-post-type-ui' ),
-						'aftertext'     => __( '(default: false)', 'custom-post-type-ui' ),
-						'helptext'      => esc_attr__( 'Whether to allow automatic creation of taxonomy columns on associated post-types.', 'custom-post-type-ui' ),
+						'labeltext'     => esc_html__( 'Show Admin Column', 'custom-post-type-ui' ),
+						'aftertext'     => esc_html__( '(default: false) Whether to allow automatic creation of taxonomy columns on associated post-types.', 'custom-post-type-ui' ),
 						'selections'    => $select,
 					) );
 
@@ -741,9 +733,8 @@ function cptui_manage_taxonomies() {
 					echo $ui->get_select_input( array(
 						'namearray'  => 'cpt_custom_tax',
 						'name'       => 'show_in_rest',
-						'labeltext'  => __( 'Show in REST API', 'custom-post-type-ui' ),
-						'aftertext'  => __( '(default: false)', 'custom-post-type-ui' ),
-						'helptext'   => esc_attr__( 'Whether to show this taxonomy data in the WP REST API.', 'custom-post-type-ui' ),
+						'labeltext'  => esc_html__( 'Show in REST API', 'custom-post-type-ui' ),
+						'aftertext'  => esc_html__( '(default: false) Whether to show this taxonomy data in the WP REST API.', 'custom-post-type-ui' ),
 						'selections' => $select,
 					) );
 
@@ -766,9 +757,8 @@ function cptui_manage_taxonomies() {
 					echo $ui->get_select_input( array(
 						'namearray'  => 'cpt_custom_tax',
 						'name'       => 'show_in_quick_edit',
-						'labeltext'  => __( 'Show in quick/bulk edit panel.', 'custom-post-type-ui' ),
-						'aftertext'  => __( '(default: false)', 'custom-post-type-ui' ),
-						'helptext'   => esc_attr__( 'Whether to show the taxonomy in the quick/bulk edit panel.', 'custom-post-type-ui' ),
+						'labeltext'  => esc_html__( 'Show in quick/bulk edit panel.', 'custom-post-type-ui' ),
+						'aftertext'  => esc_html__( '(default: false) Whether to show the taxonomy in the quick/bulk edit panel.', 'custom-post-type-ui' ),
 						'selections' => $select,
 					) );
 				?>
