@@ -844,7 +844,13 @@ function cptui_manage_post_types() {
 
 				echo $ui->get_td_end() . $ui->get_tr_end();
 
-				echo $ui->get_tr_start() . $ui->get_th_start() . __( 'Supports', 'custom-post-type-ui' ) . $ui->get_th_end() . $ui->get_td_start() . $ui->get_fieldset_start();
+				echo $ui->get_tr_start() . $ui->get_th_start() . esc_html__( 'Supports', 'custom-post-type-ui' );
+
+				echo $ui->get_p( esc_html__( 'Add support for various available post editor features on the right.', 'custom_post_type_ui' ) );
+
+				echo $ui->get_p( esc_html__( 'Use the "None" option to explicitly set "supports" to false.', 'custom-post-type-ui' ) );
+
+				echo $ui->get_th_end() . $ui->get_td_start() . $ui->get_fieldset_start();
 
 				$title_checked = ( ! empty( $current['supports'] ) && is_array( $current['supports'] ) && in_array( 'title', $current['supports'] ) ) ? 'true' : 'false';
 				if ( 'new' == $tab ) {
@@ -978,8 +984,6 @@ function cptui_manage_post_types() {
 					'default'    => true,
 					'wrap'       => false,
 				) );
-
-				echo $ui->get_p( __( 'Use the option below to explicitly set "supports" to false.', 'custom-post-type-ui' ) );
 
 				echo $ui->get_check_input( array(
 					'checkvalue' => 'none',
