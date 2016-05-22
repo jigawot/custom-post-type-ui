@@ -665,7 +665,7 @@ function cptui_manage_post_types() {
 					'namearray'      => 'cpt_custom_post_type',
 					'name'           => 'has_archive_string',
 					'textvalue'      => ( isset( $current['has_archive_string'] ) ) ? esc_attr( $current['has_archive_string'] ) : '',
-					'helptext'       => esc_attr__( 'Slug to be used for archive URL.', 'custom-post-type-ui' ),
+					'aftertext'      => esc_attr__( 'Slug to be used for archive URL.', 'custom-post-type-ui' ),
 					'helptext_after' => true,
 					'wrap'           => false,
 				) );
@@ -787,6 +787,7 @@ function cptui_manage_post_types() {
 					'namearray' => 'cpt_custom_post_type',
 					'name'      => 'menu_position',
 					'textvalue' => ( isset( $current['menu_position'] ) ) ? esc_attr( $current['menu_position'] ) : '',
+					'helptext'  => esc_html__( 'The position in the menu order the post type should appear. show_in_menu must be true.', 'custom-post-type-ui' ),
 					'wrap'      => false,
 				) );
 				echo $ui->get_td_end() . $ui->get_tr_end();
@@ -819,7 +820,7 @@ function cptui_manage_post_types() {
 					'namearray'      => 'cpt_custom_post_type',
 					'name'           => 'show_in_menu_string',
 					'textvalue'      => ( isset( $current['show_in_menu_string'] ) ) ? esc_attr( $current['show_in_menu_string'] ) : '',
-					'helptext'       => esc_attr__( 'Top-level page file name to make post type a sub-menu of.', 'custom-post-type-ui' ),
+					'helptext'       => esc_attr__( 'The top-level admin menu page file name for which the post type should be in the sub menu of.', 'custom-post-type-ui' ),
 					'helptext_after' => true,
 					'wrap'           => false,
 				) );
