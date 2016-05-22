@@ -631,10 +631,10 @@ function cptui_manage_post_types() {
 				) );
 
 				echo $ui->get_text_input( array(
-					'labeltext' => __( 'REST API base slug', 'custom-post-type-ui' ),
-					'helptext'  => esc_attr__( 'Slug to use in REST API URLs.', 'custom-post-type-ui' ),
 					'namearray' => 'cpt_custom_post_type',
 					'name'      => 'rest_base',
+					'labeltext' => esc_html__( 'REST API base slug', 'custom-post-type-ui' ),
+					'aftertext' => esc_attr__( 'Slug to use in REST API URLs.', 'custom-post-type-ui' ),
 					'textvalue' => ( isset( $current['rest_base'] ) ) ? esc_attr( $current['rest_base'] ) : '',
 				) );
 
