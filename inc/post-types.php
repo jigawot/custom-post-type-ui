@@ -1011,7 +1011,11 @@ function cptui_manage_post_types() {
 				) );
 				echo $ui->get_td_end() . $ui->get_tr_end();
 
-				echo $ui->get_tr_start() . $ui->get_th_start() . __( 'Built-in Taxonomies', 'custom-post-type-ui' ) . $ui->get_th_end() . $ui->get_td_start() . $ui->get_fieldset_start();
+				echo $ui->get_tr_start() . $ui->get_th_start() . esc_html__( 'Built-in Taxonomies', 'custom-post-type-ui' );
+
+				echo $ui->get_p( esc_html__( 'Add support for available registered taxonomies.', 'custom-post-type-ui' ) );
+
+				echo $ui->get_th_end() . $ui->get_td_start() . $ui->get_fieldset_start();
 
 				/**
 				 * Filters the arguments for taxonomies to list for post type association.
