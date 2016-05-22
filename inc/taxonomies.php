@@ -250,6 +250,8 @@ function cptui_manage_taxonomies() {
 					echo $ui->get_td_end() . $ui->get_tr_end();
 
 					echo $ui->get_tr_start() . $ui->get_th_start() . __( 'Attach to Post Type', 'custom-post-type-ui' ) . $ui->get_required_span();
+
+					echo $ui->get_p( esc_html__( 'Add support for available registered post types. At least one is required.', 'custom-post-type-ui' ) );
 					echo $ui->get_th_end() . $ui->get_td_start() . $ui->get_fieldset_start();
 
 					/**
@@ -291,7 +293,6 @@ function cptui_manage_taxonomies() {
 							'namearray'  => 'cpt_post_types',
 							'textvalue'  => $post_type->name,
 							'labeltext'  => $post_type->label . ' ' . $core_label,
-							'helptext'   => sprintf( esc_attr__( 'Adds %s support', 'custom-post-type-ui' ), $post_type->label ),
 							'wrap'       => false,
 						) );
 					}
