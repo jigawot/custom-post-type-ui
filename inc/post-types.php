@@ -436,8 +436,8 @@ function cptui_manage_post_types() {
 
 					// As of 1.4.0, this will register into `parent_item_colon` paramter upon registration and export.
 					echo $ui->get_text_input( array(
-						'labeltext' => __( 'Parent', 'custom-post-type-ui' ),
-						'helptext'  => esc_attr__( 'Post type label. Used in the admin menu for displaying post types.', 'custom-post-type-ui' ),
+						'labeltext' => esc_html__( 'Parent', 'custom-post-type-ui' ),
+						'helptext'  => esc_html__( 'Used for hierarchical types that need a colon.', 'custom-post-type-ui' ),
 						'namearray' => 'cpt_labels',
 						'name'      => 'parent',
 						'textvalue' => ( isset( $current['labels']['parent'] ) ) ? esc_attr( $current['labels']['parent'] ) : '',
