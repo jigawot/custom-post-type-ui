@@ -640,8 +640,7 @@ function cptui_manage_post_types() {
 
 				echo $ui->get_tr_start() . $ui->get_th_start();
 				echo $ui->get_label( 'has_archive', __( 'Has Archive', 'custom-post-type-ui' ) );
-				echo $ui->get_help( esc_attr__( 'Whether the post type will have a post type archive URL.', 'custom-post-type-ui' ) );
-				echo $ui->get_p( __( 'If left blank, the archive slug will default to the post type slug.', 'custom-post-type-ui' ) );
+				echo $ui->get_p( esc_html__( 'If left blank, the archive slug will default to the post type slug.', 'custom-post-type-ui' ) );
 				echo $ui->get_th_end() . $ui->get_td_start();
 
 				$select = array(
@@ -655,7 +654,7 @@ function cptui_manage_post_types() {
 				echo $ui->get_select_input( array(
 					'namearray'  => 'cpt_custom_post_type',
 					'name'       => 'has_archive',
-					'aftertext'  => __( '(default: false)', 'custom-post-type-ui' ),
+					'aftertext'  => esc_html__( '(default: false) Whether or not the post type will have a post type archive URL.', 'custom-post-type-ui' ),
 					'selections' => $select,
 					'wrap'       => false,
 				) );
