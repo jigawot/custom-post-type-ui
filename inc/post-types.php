@@ -329,7 +329,7 @@ function cptui_manage_post_types() {
 				echo $ui->get_legend_end();
 			?>
 			<table class="form-table cptui-table">
-				<?php
+					<?php
 
 					if ( isset( $current['description'] ) ) {
 						$current['description'] = stripslashes_deep( $current['description'] );
@@ -721,8 +721,8 @@ function cptui_manage_post_types() {
 
 				$select = array(
 					'options' => array(
-						array( 'attr' => '0', 'text' => __( 'False', 'custom-post-type-ui' ) ),
-						array( 'attr' => '1', 'text' => __( 'True', 'custom-post-type-ui' ), 'default' => 'true' ),
+						array( 'attr' => '0', 'text' => esc_attr__( 'False', 'custom-post-type-ui' ) ),
+						array( 'attr' => '1', 'text' => esc_attr__( 'True', 'custom-post-type-ui' ), 'default' => 'true' ),
 					),
 				);
 				$selected = ( isset( $current ) ) ? disp_boolean( $current['rewrite'] ) : '';
