@@ -778,9 +778,8 @@ function cptui_manage_post_types() {
 				) );
 
 				echo $ui->get_tr_start() . $ui->get_th_start();
-				echo $ui->get_label( 'menu_position', __( 'Menu Position', 'custom-post-type-ui' ) );
-				echo $ui->get_help( esc_attr__( 'The position in the menu order the post type should appear. show_in_menu must be true.', 'custom-post-type-ui' ) );
-				echo $ui->get_p( __( 'See <a href="http://codex.wordpress.org/Function_Reference/register_post_type#Parameters" target="_blank">Available options</a> in the "menu_position" section. Range of 5-100', 'custom-post-type-ui' ) );
+				echo $ui->get_label( 'menu_position', esc_html__( 'Menu Position', 'custom-post-type-ui' ) );
+				echo $ui->get_p( esc_html__( 'See <a href="http://codex.wordpress.org/Function_Reference/register_post_type#Parameters" target="_blank">Available options</a> in the "menu_position" section. Range of 5-100', 'custom-post-type-ui' ) );
 
 				echo $ui->get_th_end() . $ui->get_td_start();
 				echo $ui->get_text_input( array(
@@ -793,9 +792,8 @@ function cptui_manage_post_types() {
 				echo $ui->get_td_end() . $ui->get_tr_end();
 
 				echo $ui->get_tr_start() . $ui->get_th_start();
-				echo $ui->get_label( 'show_in_menu', __( 'Show in Menu', 'custom-post-type-ui' ) );
-				echo $ui->get_help( esc_attr__( 'Whether to show the post type in the admin menu and where to show that menu.', 'custom-post-type-ui' ) );
-				echo $ui->get_p( __( '"Show UI" must be "true". If an existing top level page such as "tools.php" is indicated for second input, post type will be sub menu of that.', 'custom-post-type-ui' ) );
+				echo $ui->get_label( 'show_in_menu', esc_html__( 'Show in Menu', 'custom-post-type-ui' ) );
+				echo $ui->get_p( esc_html__( '"Show UI" must be "true". If an existing top level page such as "tools.php" is indicated for second input, post type will be sub menu of that.', 'custom-post-type-ui' ) );
 				echo $ui->get_th_end() . $ui->get_td_start();
 
 				$select = array(
@@ -809,7 +807,7 @@ function cptui_manage_post_types() {
 				echo $ui->get_select_input( array(
 					'namearray'  => 'cpt_custom_post_type',
 					'name'       => 'show_in_menu',
-					'aftertext'  => __( '(default: true)', 'custom-post-type-ui' ),
+					'aftertext'  => esc_html__( '(default: true) Whether or not to show the post type in the admin menu and where to show that menu.', 'custom-post-type-ui' ),
 					'selections' => $select,
 					'wrap'       => false,
 				) );
